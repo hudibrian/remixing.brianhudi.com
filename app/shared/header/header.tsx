@@ -3,9 +3,10 @@ import { Link } from 'remix';
 
 interface Props {
   children: ReactElement[];
+  darkMode: Boolean;
 }
 
-export const Header: FC<Props> = ({ children }) => {
+export const Header: FC<Props> = ({ children, darkMode }) => {
   return (
     <nav className='flex flex-row items-center'>
       <section className='place-content-start' role='heading'>
@@ -15,6 +16,11 @@ export const Header: FC<Props> = ({ children }) => {
       </section>
       <section className='ml-auto' role='heading'>
         {children}
+      </section>
+      <section role='heading'>
+        <button>
+          {darkMode ? 'Dark' : 'Light'} {`${darkMode}`}
+        </button>
       </section>
     </nav>
   );

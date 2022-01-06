@@ -10,6 +10,7 @@ import {
 import type { MetaFunction } from 'remix';
 import styles from './tailwind.css';
 import { Header } from './shared/header/header';
+import { useEffect, useState } from 'react';
 
 export function links() {
   return [{ rel: 'stylesheet', href: styles }];
@@ -20,6 +21,9 @@ export const meta: MetaFunction = () => {
 };
 
 export default function App() {
+  // TODO: Look at kentcdodds website and understand how to darkmode and store in the browser with remix.run
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <html lang='en'>
       <head>
@@ -28,9 +32,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className='bg-gray-dark text-white'>
+      <body className='dark:bg-gray-dark dark:text-white'>
         <div className='px-[6vw] py-9 lg:py-12'>
-          <Header>
+          <Header darkMode>
             <Link className='p-1 m-2' to=''>
               Home
             </Link>
