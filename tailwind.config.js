@@ -13,14 +13,14 @@ module.exports = {
       orange: '#ff7849',
       green: '#13ce66',
       yellow: '#ffc82c',
-      'gray-dark': '#14131c',
+      'gray-dark': '#232630',
       gray: '#8492a6',
       'gray-light': '#d3dce6',
       white: '#ffffff',
     },
     fontFamily: {
-      sans: ['Montserrat', 'Helvetica', 'Arial', 'Montserrat'],
-      serif: ['Montserrat'],
+      sans: ['Roboto', 'Hind'],
+      serif: ['Trykker'],
     },
     extend: {
       spacing: {
